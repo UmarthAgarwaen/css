@@ -1,0 +1,1083 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap');
+
+/* Base Font - VT323 for everything */
+body {
+    background-color: #000000 !important;
+    color: #33ff00 !important;
+    font-family: 'VT323', monospace !important;
+    text-shadow: 0 0 3px rgba(51, 255, 0, 0.2);
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* CRITICAL FIX: Override all Blogger default styling */
+* {
+    box-sizing: border-box;
+}
+
+/* Enhanced Color Overrides for All Text Elements */
+.post-title,
+.post-title a,
+.blog-posts .date-outer,
+.post-header,
+.header h1,
+.header h1 a,
+.header h2,
+.Header h1,
+.Header h1 a,
+.Header h2,
+.sidebar h2,
+.widget h2,
+.widget-title,
+.widget .title,
+.Profile .profile-link,
+.widget.Label li a,
+.widget.BlogArchive li a,
+.feed-links,
+.blog-pager,
+#blog-pager,
+.home-link,
+.feed-links,
+.post-body,
+.post-footer,
+p, div, span, article, section {
+    color: #33ff00 !important;
+    background: transparent !important;
+}
+
+/* Share Tech Mono for Headers and UI Elements */
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.post-header,
+.header h1,
+.header h2,
+.sidebar h2,
+.footer h2,
+#header h1,
+#blog-pager,
+.blog-pager,
+.widget-title,
+.widget h2,
+.widget-label,
+.BlogArchive select,
+.Label select {
+    font-family: 'Share Tech Mono', monospace !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #33ff00 !important;
+}
+
+/* VT323 for Post Content and Non-Header Text */
+.post-body,
+.post-footer,
+.post-timestamp,
+.comment-content,
+.feed-links,
+.status-msg-body,
+.blog-description,
+.header-description,
+.header p,
+.Header p,
+.blog-tagline,
+.subtitle,
+.status-message,
+.no-posts-message,
+.blog-posts .status-msg-wrap,
+.blog-posts .status-msg-body,
+.main .widget-content p,
+.main-inner .status-msg-body,
+.main section p,
+.widget-content {
+    font-family: 'VT323', monospace !important;
+    color: #33ff00 !important;
+}
+
+/* ROBCO Terminal Frame - Main Container Enhancement */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid #33ff00;
+    border-radius: 15px;
+    margin: 10px;
+    pointer-events: none;
+    z-index: 10000;
+    box-shadow: 
+        inset 0 0 30px rgba(51, 255, 0, 0.1),
+        0 0 30px rgba(51, 255, 0, 0.3);
+}
+
+/* Terminal Header with ROBCO Industries branding - FIXED POSITIONING */
+.header-outer {
+    position: relative;
+    padding-top: 120px !important;
+}
+
+.header-outer::before {
+    content: "ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM\A COPYRIGHT 2075-2077 ROBCO INDUSTRIES\A -SERVER 2-\A\A EARLY ACCESS ALPHA 1.04C\A\A LOGIN: VAULT_DWELLER\A TIME: 2287.10.23 14:32:17";
+    font-family: 'Share Tech Mono', monospace;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 12px;
+    color: #33ff00;
+    opacity: 0.8;
+    white-space: pre;
+    line-height: 1.3;
+    z-index: 1001;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Terminal Command Prompt for Main Header - FIXED */
+.header h1,
+.Header h1 {
+    position: relative !important;
+    text-align: center !important;
+    width: calc(100% - 40px) !important;
+    display: block !important;
+    margin: 20px auto !important;
+    padding: 20px;
+    border: 2px solid #33ff00;
+    background: rgba(0, 0, 0, 0.8) !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform: none !important;
+    rotate: none !important;
+    skew: none !important;
+}
+
+.header h1::before,
+.Header h1::before {
+    content: "> ";
+    color: #ffb642;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.header h1::after,
+.Header h1::after {
+    content: " <";
+    color: #ffb642;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* FIXED: Navigation with proper terminal menu style */
+.tabs-outer {
+    margin: 20px auto;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+}
+
+.tabs-inner {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    border: 2px solid #33ff00;
+    background: rgba(0, 20, 0, 0.6);
+    box-shadow: 
+        inset 0 0 20px rgba(51, 255, 0, 0.05),
+        0 0 15px rgba(51, 255, 0, 0.1);
+}
+
+.tabs-inner::before {
+    content: "=== MAIN NAVIGATION ===";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffb642;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+/* FIXED: Terminal Menu Items - Consistent styling */
+.tabs .tab,
+.tabs .tab a {
+    position: relative !important;
+    color: #33ff00 !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 18px;
+    margin: 3px 6px;
+    border: 2px solid #33ff00 !important;
+    background: rgba(0, 20, 0, 0.5) !important;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    transform: none !important;
+    min-width: 100px;
+}
+
+.tabs .tab::before {
+    content: "[EXEC] ";
+    color: #ffb642;
+    font-size: 11px;
+}
+
+.tabs .tab:hover,
+.tabs .tab.selected {
+    background: rgba(51, 255, 0, 0.2) !important;
+    color: #000000 !important;
+    text-shadow: none;
+    box-shadow: 0 0 15px rgba(51, 255, 0, 0.4);
+}
+
+/* FIXED: Main content area */
+.main-inner {
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* FIXED: All Widgets - Consistent styling */
+.widget {
+    position: relative !important;
+    border: 2px solid #33ff00 !important;
+    border-radius: 0 !important;
+    padding: 20px !important;
+    margin-bottom: 25px !important;
+    background: rgba(0, 20, 0, 0.6) !important;
+    box-shadow: 
+        0 0 15px rgba(51, 255, 0, 0.1),
+        inset 0 0 20px rgba(51, 255, 0, 0.05) !important;
+    transition: all 0.3s ease;
+    transform: none !important;
+    rotate: none !important;
+    skew: none !important;
+}
+
+.widget::before {
+    content: "--- TERMINAL WINDOW ---";
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background: #000000;
+    color: #ffb642;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    padding: 0 8px;
+    letter-spacing: 1px;
+    border: 1px solid #33ff00;
+}
+
+/* FIXED: Widget titles with proper terminal styling */
+.widget h2,
+.widget-title {
+    font-family: 'Share Tech Mono', monospace !important;
+    color: #33ff00 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+.widget h2::before,
+.widget-title::before {
+    content: "> ";
+    color: #ffb642;
+    font-family: 'Share Tech Mono', monospace;
+    margin-right: 5px;
+}
+
+/* FIXED: Widget content with proper font */
+.widget-content,
+.widget-content p,
+.widget-content div,
+.widget-content span {
+    font-family: 'VT323', monospace !important;
+    color: #33ff00 !important;
+    line-height: 1.4;
+}
+
+/* FIXED: Enhanced Search Elements with better styling */
+.BlogSearch,
+.search-form,
+.widget.Header {
+    position: relative;
+    margin: 20px 0;
+    border: 2px solid #33ff00;
+    padding: 20px;
+    background: rgba(0, 20, 0, 0.6);
+    transform: none !important;
+}
+
+.BlogSearch::before,
+.search-form::before,
+.widget.Header::before {
+    content: "=== DATABASE SEARCH ===\A [ENTER SEARCH PARAMETERS]";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffb642;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    white-space: pre;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.BlogSearch input[type="text"],
+.search-input input[type="text"],
+.widget.Header input {
+    background: rgba(0, 30, 0, 0.9) !important;
+    border: 1px solid #33ff00 !important;
+    color: #33ff00 !important;
+    font-family: 'VT323', monospace !important;
+    padding: 12px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+.BlogSearch input[type="text"]::placeholder,
+.widget.Header input::placeholder {
+    color: rgba(51, 255, 0, 0.6) !important;
+    font-family: 'VT323', monospace !important;
+}
+
+.BlogSearch input[type="submit"],
+.search-action.flat-button,
+.search-button,
+.widget.Header button {
+    background: rgba(0, 30, 0, 0.9) !important;
+    border: 2px solid #33ff00 !important;
+    color: #33ff00 !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    border-radius: 0;
+}
+
+.BlogSearch input[type="submit"]::before,
+.search-action.flat-button::before,
+.widget.Header button::before {
+    content: "[EXECUTE] ";
+    color: #ffb642;
+}
+
+/* CRT Screen Effect */
+.container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.15) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+    animation: scanline 2s linear infinite;
+}
+
+/* Screen distortion effect */
+.container::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.2) 90%),
+        linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.05) 2%, transparent 2.1%, transparent 97.9%, rgba(0, 0, 0, 0.05) 98%, transparent 100%);
+    pointer-events: none;
+    z-index: 998;
+}
+
+/* FIXED: Terminal List Items with consistent indicators */
+.widget li,
+.Label li,
+.BlogArchive li {
+    position: relative;
+    list-style: none !important;
+    margin: 10px 0;
+    padding-left: 25px;
+    color: #33ff00 !important;
+    font-family: 'VT323', monospace !important;
+    transition: all 0.2s ease;
+}
+
+.widget li::before,
+.Label li::before,
+.BlogArchive li::before {
+    content: ">" !important;
+    position: absolute;
+    left: 0;
+    color: #ffb642 !important;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.widget li:hover,
+.Label li:hover,
+.BlogArchive li:hover {
+    padding-left: 30px;
+    color: #40ff00 !important;
+}
+
+.widget li:hover::before,
+.Label li:hover::before,
+.BlogArchive li:hover::before {
+    content: ">>" !important;
+    color: #33ff00 !important;
+    animation: cursor-blink 0.8s infinite;
+    left: 5px;
+}
+
+/* FIXED: Post Styling with consistent borders */
+.post {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 25px;
+    border: 2px solid rgba(51, 255, 0, 0.5) !important;
+    background: rgba(0, 20, 0, 0.3) !important;
+    transform: none !important;
+    box-shadow: 
+        inset 0 0 20px rgba(51, 255, 0, 0.05),
+        0 0 15px rgba(51, 255, 0, 0.1);
+}
+
+.post::before {
+    content: "=== ACCESSING HOLOTAPE DATA ===\A [LOADING CONTENT...]";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffb642;
+    font-size: 11px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    white-space: pre;
+    line-height: 1.4;
+    text-align: center;
+    border-bottom: 1px dashed rgba(51, 255, 0, 0.3);
+    padding-bottom: 10px;
+}
+
+/* FIXED: Post Title with terminal prompt */
+.post-title {
+    position: relative;
+    padding-left: 30px;
+    margin: 20px 0;
+    font-size: 20px;
+    font-family: 'Share Tech Mono', monospace !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.post-title::before {
+    content: "EXEC> ";
+    position: absolute;
+    left: 0;
+    color: #ffb642;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px;
+}
+
+.post-title::after {
+    content: "_";
+    animation: cursor-blink 1s infinite;
+    color: #33ff00;
+    margin-left: 5px;
+}
+
+/* FIXED: Post Body with proper terminal formatting */
+.post-body {
+    position: relative;
+    padding: 20px 0;
+    line-height: 1.6;
+    font-family: 'VT323', monospace !important;
+}
+
+.post-body::before {
+    content: "--- HOLOTAPE DATA STREAM ---";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: rgba(51, 255, 0, 0.7);
+    font-size: 11px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed rgba(51, 255, 0, 0.3);
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+/* FIXED: Enhanced Links with consistent terminal styling */
+a {
+    color: #ffb642 !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: 'VT323', monospace !important;
+}
+
+a::before {
+    content: "[LINK: ";
+    color: #33ff00;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+a::after {
+    content: "]";
+    color: #33ff00;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+a:hover {
+    color: #33ff00 !important;
+    text-shadow: 0 0 10px rgba(51, 255, 0, 0.6);
+    background: rgba(51, 255, 0, 0.1) !important;
+    padding: 3px 6px;
+    border-radius: 2px;
+}
+
+a:hover::before {
+    content: "[ACCESSING: ";
+    color: #ffb642;
+    animation: cursor-blink 0.5s infinite;
+}
+
+/* FIXED: Form Elements with consistent styling */
+input, textarea, select {
+    background: rgba(0, 30, 0, 0.9) !important;
+    border: 1px solid #33ff00 !important;
+    color: #33ff00 !important;
+    font-family: 'VT323', monospace !important;
+    padding: 10px;
+    position: relative;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none !important;
+    border-color: #ffb642 !important;
+    box-shadow: 0 0 15px rgba(255, 182, 66, 0.4);
+    background: rgba(0, 40, 0, 0.9) !important;
+}
+
+/* FIXED: Buttons with consistent terminal command styling */
+button, 
+input[type="button"], 
+input[type="submit"],
+.flat-button {
+    background: rgba(0, 30, 0, 0.9) !important;
+    border: 2px solid #33ff00 !important;
+    color: #33ff00 !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    border-radius: 0;
+}
+
+button::before,
+input[type="button"]::before,
+input[type="submit"]::before,
+.flat-button::before {
+    content: "[EXECUTE] ";
+    color: #ffb642;
+    font-size: 0.9em;
+}
+
+button:hover, 
+input[type="button"]:hover, 
+input[type="submit"]:hover,
+.flat-button:hover {
+    background: rgba(51, 255, 0, 0.2) !important;
+    color: #000000 !important;
+    text-shadow: none;
+    box-shadow: 0 0 20px rgba(51, 255, 0, 0.4);
+    transform: scale(1.05);
+}
+
+/* FIXED: Blogger Attribution with proper terminal styling */
+.footer .blogger-attribution,
+#footer .blogger-attribution,
+.powered-by,
+.blogger-attribution {
+    position: relative;
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px dashed rgba(51, 255, 0, 0.4) !important;
+    background: rgba(0, 10, 0, 0.3) !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    color: #33ff00 !important;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.footer .blogger-attribution::before,
+#footer .blogger-attribution::before,
+.powered-by::before,
+.blogger-attribution::before {
+    content: "[SYSTEM ATTRIBUTION] ";
+    color: #ffb642;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* FIXED: Blogger attribution links */
+.blogger-attribution a,
+.powered-by a {
+    color: #ffb642 !important;
+    font-family: 'Share Tech Mono', monospace !important;
+}
+
+.blogger-attribution a::before,
+.powered-by a::before {
+    content: "[";
+    color: #33ff00;
+}
+
+.blogger-attribution a::after,
+.powered-by a::after {
+    content: "]";
+    color: #33ff00;
+}
+
+/* FIXED: Archive and Label Widgets with consistent headers */
+.BlogArchive,
+.Label {
+    position: relative;
+}
+
+.BlogArchive .widget-content::before {
+    content: "=== VAULT DATABASE ARCHIVE ===\A [HISTORICAL DATA ACCESS]";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffb642;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-size: 11px;
+    white-space: pre;
+    line-height: 1.4;
+    text-align: center;
+    border-bottom: 1px dashed rgba(51, 255, 0, 0.3);
+    padding-bottom: 8px;
+}
+
+.Label .widget-content::before {
+    content: "=== DATA CLASSIFICATION ===\A [TOPIC DIRECTORY ACCESS]";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffb642;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-size: 11px;
+    white-space: pre;
+    line-height: 1.4;
+    text-align: center;
+    border-bottom: 1px dashed rgba(51, 255, 0, 0.3);
+    padding-bottom: 8px;
+}
+
+/* FIXED: Pagination with better terminal styling */
+.blog-pager,
+#blog-pager {
+    position: relative;
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    border: 2px solid rgba(51, 255, 0, 0.6) !important;
+    background: rgba(0, 20, 0, 0.4) !important;
+    box-shadow: 
+        inset 0 0 15px rgba(51, 255, 0, 0.05),
+        0 0 20px rgba(51, 255, 0, 0.1);
+}
+
+.blog-pager::before,
+#blog-pager::before {
+    content: "=== HOLOTAPE NAVIGATION ===\A [SELECT PAGE TO ACCESS]";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffb642;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-size: 11px;
+    white-space: pre;
+    line-height: 1.4;
+}
+
+.blog-pager a,
+#blog-pager a {
+    padding: 10px 18px;
+    margin: 0 8px;
+    border: 2px solid #33ff00 !important;
+    background: rgba(0, 30, 0, 0.6) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #33ff00 !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.blog-pager a::before,
+#blog-pager a::before {
+    content: "[";
+    color: #ffb642;
+    margin-right: 3px;
+}
+
+.blog-pager a::after,
+#blog-pager a::after {
+    content: "]";
+    color: #ffb642;
+    margin-left: 3px;
+}
+
+/* Enhanced Selection styling */
+::selection {
+    background: rgba(51, 255, 0, 0.3) !important;
+    color: #000000 !important;
+    text-shadow: none;
+}
+
+/* Enhanced Scrollbar with terminal styling */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 20, 0, 0.6);
+    border: 2px solid rgba(51, 255, 0, 0.3);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #33ff00, #28cc00);
+    border: 1px solid #000000;
+    border-radius: 0;
+    box-shadow: inset 0 0 5px rgba(51, 255, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #40ff00, #33ff00);
+    box-shadow: 
+        0 0 10px rgba(51, 255, 0, 0.5),
+        inset 0 0 8px rgba(51, 255, 0, 0.4);
+}
+
+/* FIXED: Footer with consistent terminal system info */
+.footer,
+#footer {
+    position: relative;
+    margin-top: 60px;
+    padding: 25px;
+    border-top: 3px solid rgba(51, 255, 0, 0.6);
+    text-align: center;
+    background: rgba(0, 15, 0, 0.4);
+}
+
+.footer::before,
+#footer::before {
+    content: "=== VAULT-TEC TERMINAL SYSTEM INFO ===\A ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL v2.1\A CONNECTION STATUS: STABLE\A UPTIME: 2287 DAYS\A USER PRIVILEGES: VAULT_DWELLER [LEVEL 5]";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: rgba(51, 255, 0, 0.7);
+    margin-bottom: 20px;
+    white-space: pre;
+    line-height: 1.4;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+/* Terminal Status Bar at Bottom - FIXED */
+body::after {
+    content: "SYSTEM: VAULT-TEC TERMINAL v2.1 | STATUS: ONLINE | USER: VAULT_DWELLER | SIGNAL: STRONG | UPTIME: 2287 DAYS";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 30, 0, 0.95);
+    color: #33ff00;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    padding: 8px 15px;
+    border-top: 2px solid #33ff00;
+    text-align: center;
+    letter-spacing: 0.5px;
+    z-index: 10001;
+    opacity: 0.9;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .header-outer {
+        padding-top: 120px !important;
+    }
+    
+    .header-outer::before {
+        font-size: 9px;
+        top: 15px;
+        left: 15px;
+        line-height: 1.2;
+    }
+    
+    .header h1,
+    .Header h1 {
+        font-size: 18px !important;
+        padding: 15px !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .tabs .tab {
+        display: block !important;
+        margin: 8px auto !important;
+        width: calc(100% - 30px) !important;
+        text-align: center !important;
+        min-width: auto;
+    }
+    
+    .widget {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    
+    .widget::before {
+        font-size: 9px;
+    }
+    
+    body::before {
+        margin: 5px;
+    }
+    
+    .main-inner {
+        padding: 15px;
+    }
+    
+    .post {
+        padding: 20px 15px;
+    }
+    
+    .post-title {
+        font-size: 18px;
+        padding-left: 25px;
+    }
+    
+    .post-title::before {
+        font-size: 14px;
+    }
+    
+    body::after {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .header-outer::before {
+        font-size: 8px;
+        top: 10px;
+        left: 10px;
+    }
+    
+    .header h1,
+    .Header h1 {
+        font-size: 16px !important;
+        padding: 12px !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    .tabs-inner {
+        padding: 15px 0;
+    }
+    
+    .tabs-inner::before {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+    
+    .widget {
+        padding: 12px;
+        margin-bottom: 18px;
+    }
+    
+    .post {
+        padding: 15px 10px;
+    }
+    
+    body::before {
+        margin: 2px;
+        border-width: 2px;
+    }
+    
+    body::after {
+        font-size: 9px;
+        padding: 5px 8px;
+    }
+}
+
+/* Animation Definitions */
+@keyframes scanline {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(4px); }
+}
+
+@keyframes cursor-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+@keyframes glow-pulse {
+    0% { 
+        text-shadow: 0 0 5px rgba(51, 255, 0, 0.2);
+        box-shadow: 0 0 15px rgba(51, 255, 0, 0.1);
+    }
+    50% { 
+        text-shadow: 0 0 15px rgba(51, 255, 0, 0.4);
+        box-shadow: 0 0 30px rgba(51, 255, 0, 0.2);
+    }
+    100% { 
+        text-shadow: 0 0 5px rgba(51, 255, 0, 0.2);
+        box-shadow: 0 0 15px rgba(51, 255, 0, 0.1);
+    }
+}
+
+/* Apply enhanced animations */
+.widget,
+.post,
+.header h1,
+.Header h1,
+.tabs-inner {
+    animation: glow-pulse 6s ease-in-out infinite;
+}
+
+/* CRITICAL: Remove all conflicting elements and transforms */
+.soho-neon-counter,
+.theme-counter,
+[class*="counter"]::before,
+[class*="counter"]::after,
+.numbered-list::before,
+.numbered-list::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Override any numbered list styling */
+ol li::before,
+ul li::marker,
+ol li::marker {
+    content: none !important;
+}
+
+/* BLOGGER TEMPLATE CRITICAL OVERRIDES */
+.main-wrapper,
+.content-wrapper,
+.sidebar-wrapper,
+.header-wrapper,
+.tabs-wrapper,
+.footer-wrapper {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    rotate: none !important;
+    skew: none !important;
+    clip-path: none !important;
+    filter: none !important;
+    margin: 0 !important;
+    position: relative !important;
+}
+
+/* Fix layout containers */
+.content-wrapper {
+    margin: 20px auto !important;
+    max-width: 1400px !important;
+    padding: 0 20px !important;
+}
+
+.main-inner .column-center-inner,
+.main-inner .column-left-inner,
+.main-inner .column-right-inner {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+/* Fix specific Blogger elements */
+.date-outer,
+.date-posts,
+.post-outer {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+.post-outer {
+    margin-bottom: 40px !important;
+}
+
+/* Fix sidebar and main content positioning */
+.sidebar .widget,
+.main .widget {
+    margin: 0 0 25px 0 !important;
+    float: none !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+/* Final failsafe for transforms */
+* {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+}
+
+/* Allow only specific transforms for our animations */
+.tabs .tab:hover,
+.widget:hover,
+button:hover,
+input[type="submit"]:hover,
+.flat-button:hover,
+.blog-pager a:hover,
+#blog-pager a:hover {
+    /* These hover transforms are allowed */
+}
+
+/* Enhanced focus indicators for accessibility */
+*:focus {
+    outline: 2px dashed #ffb642 !important;
+    outline-offset: 2px;
+}
