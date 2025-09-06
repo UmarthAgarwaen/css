@@ -114,6 +114,13 @@ body::before {
         0 0 30px rgba(51, 255, 0, 0.3);
 }
 
+/* ONLY CRITICAL MOBILE FIX: Hide problematic Blogger elements */
+.navbar,
+.navbar-inner,
+#navbar-iframe {
+    display: none !important;
+}
+
 /* Terminal Header with ROBCO Industries branding - FIXED POSITIONING */
 .header-outer {
     position: relative;
@@ -831,14 +838,14 @@ body::after {
     opacity: 0.9;
 }
 
-/* Mobile Optimization */
+/* ONLY MOBILE FIXES - DON'T TOUCH ANYTHING ELSE */
 @media screen and (max-width: 768px) {
     body {
         font-size: 16px;
     }
     
     .header-outer {
-        padding-top: 120px !important;
+        padding-top: 100px !important;
     }
     
     .header-outer::before {
@@ -853,6 +860,11 @@ body::after {
         font-size: 18px !important;
         padding: 15px !important;
         letter-spacing: 1px !important;
+        width: calc(100% - 20px) !important;
+    }
+    
+    .tabs-outer {
+        width: calc(100% - 20px);
     }
     
     .tabs .tab {
@@ -861,6 +873,11 @@ body::after {
         width: calc(100% - 30px) !important;
         text-align: center !important;
         min-width: auto;
+    }
+    
+    .main-inner {
+        max-width: calc(100% - 20px);
+        padding: 15px;
     }
     
     .widget {
@@ -874,10 +891,6 @@ body::after {
     
     body::before {
         margin: 5px;
-    }
-    
-    .main-inner {
-        padding: 15px;
     }
     
     .post {
@@ -915,6 +928,7 @@ body::after {
         font-size: 16px !important;
         padding: 12px !important;
         letter-spacing: 0.5px !important;
+        width: calc(100% - 10px) !important;
     }
     
     .tabs-inner {
@@ -944,9 +958,14 @@ body::after {
         font-size: 9px;
         padding: 5px 8px;
     }
+    
+    .main-inner {
+        max-width: calc(100% - 10px);
+        padding: 10px;
+    }
 }
 
-/* Animation Definitions */
+/* Animation Definitions - KEEPING ALL ORIGINAL ANIMATIONS */
 @keyframes scanline {
     0% { transform: translateY(0); }
     100% { transform: translateY(4px); }
