@@ -1,0 +1,786 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap');
+
+/* GTFO + Fallout Color Variables */
+:root {
+    --gtfo-red: #ff2a2a;
+    --gtfo-dark-red: #cc0000;
+    --gtfo-crimson: #dc143c;
+    --gtfo-blood: #8b0000;
+    --fallout-green: #33ff00;
+    --fallout-amber: #ffb642;
+    --terminal-blue: #00ccff;
+    --warning-orange: #ff6600;
+    --reading-white: #e0e0e0;
+}
+
+/* Base Font - VT323 for everything */
+body {
+    background-color: #000000 !important;
+    color: var(--reading-white) !important;
+    font-family: 'VT323', monospace !important;
+    text-shadow: 0 0 3px rgba(224, 224, 224, 0.2);
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* CRITICAL FIX: Override all Blogger default styling */
+* {
+    box-sizing: border-box;
+}
+
+/* Enhanced Color Overrides - Mixed GTFO/Fallout palette */
+.post-title,
+.post-title a,
+.blog-posts .date-outer,
+.post-header,
+.header h1,
+.header h1 a,
+.header h2,
+.Header h1,
+.Header h1 a,
+.Header h2,
+.sidebar h2,
+.widget h2,
+.widget-title,
+.widget .title,
+.Profile .profile-link,
+.widget.Label li a,
+.widget.BlogArchive li a,
+.feed-links,
+.blog-pager,
+#blog-pager,
+.home-link,
+.feed-links,
+.post-body,
+.post-footer,
+p, div, span, article, section {
+    color: var(--reading-white) !important;
+    background: transparent !important;
+}
+
+/* Share Tech Mono for Headers - GTFO Red accents */
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.post-header,
+.header h1,
+.header h2,
+.sidebar h2,
+.footer h2,
+#header h1,
+#blog-pager,
+.blog-pager,
+.widget-title,
+.widget h2,
+.widget-label,
+.BlogArchive select,
+.Label select {
+    font-family: 'Share Tech Mono', monospace !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gtfo-red) !important;
+    text-shadow: 0 0 5px rgba(255, 42, 42, 0.3);
+}
+
+/* VT323 for Post Content - Optimized for reading */
+.post-body,
+.post-footer,
+.post-timestamp,
+.comment-content,
+.feed-links,
+.status-msg-body,
+.blog-description,
+.header-description,
+.header p,
+.Header p,
+.blog-tagline,
+.subtitle,
+.status-message,
+.no-posts-message,
+.blog-posts .status-msg-wrap,
+.blog-posts .status-msg-body,
+.main .widget-content p,
+.main-inner .status-msg-body,
+.main section p,
+.widget-content {
+    font-family: 'VT323', monospace !important;
+    color: var(--reading-white) !important;
+}
+
+/* ROBCO Terminal Frame - Enhanced with GTFO elements */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid var(--fallout-green);
+    border-radius: 15px;
+    margin: 10px;
+    pointer-events: none;
+    z-index: 10000;
+    box-shadow: 
+        inset 0 0 30px rgba(51, 255, 0, 0.1),
+        0 0 30px rgba(51, 255, 0, 0.3),
+        inset 0 0 50px rgba(255, 42, 42, 0.05);
+}
+
+/* ONLY CRITICAL MOBILE FIX: Hide problematic Blogger elements */
+.navbar,
+.navbar-inner,
+#navbar-iframe {
+    display: none !important;
+}
+
+/* Terminal Header with ROBCO Industries branding - GTFO Enhanced */
+.header-outer {
+    position: relative;
+    padding-top: 120px !important;
+}
+
+.header-outer::before {
+    content: "ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM\A COPYRIGHT 2075-2077 ROBCO INDUSTRIES\A -SERVER 2- [GTFO PROTOCOL ACTIVE]\A\A EARLY ACCESS ALPHA 1.04C\A\A LOGIN: VAULT_DWELLER [CLEARANCE: RED]\A TIME: 2287.10.23 14:32:17";
+    font-family: 'Share Tech Mono', monospace;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 12px;
+    color: var(--fallout-green);
+    opacity: 0.8;
+    white-space: pre;
+    line-height: 1.3;
+    z-index: 1001;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 3px rgba(51, 255, 0, 0.4);
+}
+
+/* Terminal Command Prompt for Main Header - GTFO Red borders */
+.header h1,
+.Header h1 {
+    position: relative !important;
+    text-align: center !important;
+    width: calc(100% - 40px) !important;
+    display: block !important;
+    margin: 20px auto !important;
+    padding: 20px;
+    border: 2px solid var(--gtfo-red);
+    background: rgba(0, 0, 0, 0.8) !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform: none !important;
+    rotate: none !important;
+    skew: none !important;
+    box-shadow: 
+        0 0 20px rgba(255, 42, 42, 0.3),
+        inset 0 0 20px rgba(255, 42, 42, 0.1);
+}
+
+.header h1::before,
+.Header h1::before {
+    content: ">>> ";
+    color: var(--gtfo-crimson);
+    font-family: 'Share Tech Mono', monospace;
+    text-shadow: 0 0 8px rgba(220, 20, 60, 0.6);
+}
+
+.header h1::after,
+.Header h1::after {
+    content: " <<<";
+    color: var(--gtfo-crimson);
+    font-family: 'Share Tech Mono', monospace;
+    text-shadow: 0 0 8px rgba(220, 20, 60, 0.6);
+}
+
+/* FIXED: Navigation with GTFO styling */
+.tabs-outer {
+    margin: 20px auto;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+}
+
+.tabs-inner {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    border: 2px solid var(--terminal-blue);
+    background: rgba(0, 20, 30, 0.6);
+    box-shadow: 
+        inset 0 0 20px rgba(0, 204, 255, 0.05),
+        0 0 15px rgba(0, 204, 255, 0.2);
+}
+
+.tabs-inner::before {
+    content: "=== MAIN NAVIGATION [GTFO PROTOCOL] ===";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--terminal-blue);
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-shadow: 0 0 5px rgba(0, 204, 255, 0.5);
+}
+
+/* FIXED: Terminal Menu Items - GTFO Color scheme */
+.tabs .tab,
+.tabs .tab a {
+    position: relative !important;
+    color: var(--fallout-green) !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 18px;
+    margin: 3px 6px;
+    border: 2px solid var(--fallout-green) !important;
+    background: rgba(0, 30, 0, 0.5) !important;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    transform: none !important;
+    min-width: 100px;
+}
+
+.tabs .tab::before {
+    content: "[EXEC] ";
+    color: var(--fallout-amber);
+    font-size: 11px;
+}
+
+.tabs .tab:hover,
+.tabs .tab.selected {
+    background: rgba(255, 42, 42, 0.2) !important;
+    color: var(--reading-white) !important;
+    border-color: var(--gtfo-red) !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 42, 42, 0.4);
+}
+
+/* FIXED: Main content area */
+.main-inner {
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 25px;
+}
+
+/* FIXED: All Widgets - GTFO Enhanced styling */
+.widget {
+    position: relative !important;
+    border: 2px solid var(--gtfo-red) !important;
+    border-radius: 0 !important;
+    padding: 20px !important;
+    margin-bottom: 25px !important;
+    background: rgba(30, 0, 0, 0.6) !important;
+    box-shadow: 
+        0 0 15px rgba(255, 42, 42, 0.1),
+        inset 0 0 20px rgba(255, 42, 42, 0.05) !important;
+    transition: all 0.3s ease;
+    transform: none !important;
+    rotate: none !important;
+    skew: none !important;
+}
+
+.widget::before {
+    content: "--- TERMINAL WINDOW [GTFO] ---";
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background: #000000;
+    color: var(--gtfo-crimson);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    padding: 0 8px;
+    letter-spacing: 1px;
+    border: 1px solid var(--gtfo-red);
+    text-shadow: 0 0 5px rgba(220, 20, 60, 0.5);
+}
+
+/* FIXED: Widget titles with GTFO styling */
+.widget h2,
+.widget-title {
+    font-family: 'Share Tech Mono', monospace !important;
+    color: var(--gtfo-red) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+    position: relative;
+    text-shadow: 0 0 5px rgba(255, 42, 42, 0.4);
+}
+
+.widget h2::before,
+.widget-title::before {
+    content: ">>> ";
+    color: var(--gtfo-crimson);
+    font-family: 'Share Tech Mono', monospace;
+    margin-right: 5px;
+}
+
+/* FIXED: Widget content - Readable white text */
+.widget-content,
+.widget-content p,
+.widget-content div,
+.widget-content span {
+    font-family: 'VT323', monospace !important;
+    color: var(--reading-white) !important;
+    line-height: 1.4;
+}
+
+/* FIXED: Enhanced Search Elements - GTFO themed */
+.BlogSearch,
+.search-form,
+.widget.Header {
+    position: relative;
+    margin: 20px 0;
+    border: 2px solid var(--terminal-blue);
+    padding: 20px;
+    background: rgba(0, 30, 50, 0.6);
+    transform: none !important;
+}
+
+.BlogSearch::before,
+.search-form::before,
+.widget.Header::before {
+    content: "=== DATABASE SEARCH [GTFO PROTOCOL] ===\A [ENTER SEARCH PARAMETERS]";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--terminal-blue);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    white-space: pre;
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 204, 255, 0.5);
+}
+
+.BlogSearch input[type="text"],
+.search-input input[type="text"],
+.widget.Header input {
+    background: rgba(0, 20, 0, 0.9) !important;
+    border: 1px solid var(--fallout-green) !important;
+    color: var(--reading-white) !important;
+    font-family: 'VT323', monospace !important;
+    padding: 12px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+.BlogSearch input[type="text"]::placeholder,
+.widget.Header input::placeholder {
+    color: rgba(224, 224, 224, 0.6) !important;
+    font-family: 'VT323', monospace !important;
+}
+
+.BlogSearch input[type="submit"],
+.search-action.flat-button,
+.search-button,
+.widget.Header button {
+    background: rgba(30, 0, 0, 0.9) !important;
+    border: 2px solid var(--gtfo-red) !important;
+    color: var(--gtfo-red) !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    border-radius: 0;
+    text-shadow: 0 0 5px rgba(255, 42, 42, 0.3);
+}
+
+.BlogSearch input[type="submit"]::before,
+.search-action.flat-button::before,
+.widget.Header button::before {
+    content: "[EXECUTE] ";
+    color: var(--fallout-amber);
+}
+
+/* CRT Screen Effect - Enhanced */
+.container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%,
+        rgba(255, 42, 42, 0.02) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+    animation: scanline 2s linear infinite;
+}
+
+/* Screen distortion effect - GTFO tinted */
+.container::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at center, transparent 30%, rgba(255, 42, 42, 0.05) 90%),
+        linear-gradient(90deg, transparent 0%, rgba(0, 204, 255, 0.02) 2%, transparent 2.1%, transparent 97.9%, rgba(0, 204, 255, 0.02) 98%, transparent 100%);
+    pointer-events: none;
+    z-index: 998;
+}
+
+/* FIXED: Terminal List Items - GTFO indicators */
+.widget li,
+.Label li,
+.BlogArchive li {
+    position: relative;
+    list-style: none !important;
+    margin: 10px 0;
+    padding-left: 25px;
+    color: var(--reading-white) !important;
+    font-family: 'VT323', monospace !important;
+    transition: all 0.2s ease;
+}
+
+.widget li::before,
+.Label li::before,
+.BlogArchive li::before {
+    content: ">" !important;
+    position: absolute;
+    left: 0;
+    color: var(--gtfo-crimson) !important;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    text-shadow: 0 0 5px rgba(220, 20, 60, 0.5);
+}
+
+.widget li:hover,
+.Label li:hover,
+.BlogArchive li:hover {
+    padding-left: 30px;
+    color: var(--gtfo-red) !important;
+}
+
+.widget li:hover::before,
+.Label li:hover::before,
+.BlogArchive li:hover::before {
+    content: ">>" !important;
+    color: var(--gtfo-red) !important;
+    animation: cursor-blink 0.8s infinite;
+    left: 5px;
+}
+
+/* FIXED: Post Styling - GTFO Enhanced */
+.post {
+    position: relative;
+    margin-bottom: 50px;
+    padding: 30px;
+    border: 2px solid rgba(255, 42, 42, 0.6) !important;
+    background: rgba(30, 0, 0, 0.3) !important;
+    transform: none !important;
+    box-shadow: 
+        inset 0 0 20px rgba(255, 42, 42, 0.05),
+        0 0 15px rgba(255, 42, 42, 0.1);
+}
+
+.post::before {
+    content: "=== ACCESSING HOLOTAPE DATA [GTFO PROTOCOL] ===\A [LOADING CONTENT...]";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--terminal-blue);
+    font-size: 11px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    white-space: pre;
+    line-height: 1.4;
+    text-align: center;
+    border-bottom: 1px dashed rgba(0, 204, 255, 0.4);
+    padding-bottom: 10px;
+    text-shadow: 0 0 5px rgba(0, 204, 255, 0.4);
+}
+
+/* POST DISPLAY FIXES - GTFO Enhanced */
+
+/* Fix post title truncation */
+.post-title,
+.post-title a {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    max-width: 100% !important;
+    padding-left: 35px !important;
+    margin: 25px 0 !important;
+    color: var(--gtfo-red) !important;
+    text-shadow: 0 0 8px rgba(255, 42, 42, 0.5);
+}
+
+.post-title::before {
+    content: "EXEC> " !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: var(--gtfo-crimson) !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 18px !important;
+    text-shadow: 0 0 8px rgba(220, 20, 60, 0.6);
+}
+
+.post-title::after {
+    content: "_";
+    animation: cursor-blink 1s infinite;
+    color: var(--gtfo-red);
+    margin-left: 5px;
+}
+
+/* Ensure post containers have proper spacing */
+.post,
+.post-outer,
+.hentry {
+    margin-bottom: 50px !important;
+    padding: 30px !important;
+    min-height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    clear: both !important;
+    display: block !important;
+}
+
+/* Fix post body content display - Optimized for reading */
+.post-body {
+    padding: 25px 0 !important;
+    margin: 20px 0 !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: var(--reading-white) !important;
+    font-family: 'VT323', monospace !important;
+    text-shadow: 0 0 1px rgba(224, 224, 224, 0.3);
+}
+
+.post-body p {
+    margin-bottom: 15px !important;
+    color: var(--reading-white) !important;
+    font-family: 'VT323', monospace !important;
+    font-size: 16px !important;
+}
+
+/* Fix blog posts section */
+.blog-posts {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.blog-posts .post-outer {
+    border: 2px solid rgba(255, 42, 42, 0.6) !important;
+    background: rgba(30, 0, 0, 0.3) !important;
+    margin-bottom: 40px !important;
+    padding: 25px !important;
+    position: relative !important;
+}
+
+/* Fix post header and metadata */
+.post-header {
+    margin-bottom: 20px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px dashed rgba(0, 204, 255, 0.4) !important;
+}
+
+.post-timestamp {
+    color: var(--terminal-blue) !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-shadow: 0 0 5px rgba(0, 204, 255, 0.4);
+}
+
+.post-timestamp::before {
+    content: "[TIMESTAMP: " !important;
+    color: var(--fallout-green) !important;
+}
+
+.post-timestamp::after {
+    content: "]" !important;
+    color: var(--fallout-green) !important;
+}
+
+/* Fix post footer */
+.post-footer {
+    margin-top: 25px !important;
+    padding-top: 15px !important;
+    border-top: 1px dashed rgba(255, 42, 42, 0.4) !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    color: rgba(224, 224, 224, 0.8) !important;
+    font-size: 11px !important;
+}
+
+/* Fix "Read More" links - GTFO styled */
+.jump-link {
+    display: inline-block !important;
+    margin-top: 15px !important;
+    padding: 8px 15px !important;
+    border: 2px solid var(--gtfo-red) !important;
+    background: rgba(255, 42, 42, 0.1) !important;
+    color: var(--gtfo-red) !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    text-shadow: 0 0 5px rgba(255, 42, 42, 0.4);
+}
+
+.jump-link::before {
+    content: "[EXECUTE] " !important;
+    color: var(--fallout-amber) !important;
+}
+
+.jump-link:hover {
+    background: rgba(255, 42, 42, 0.3) !important;
+    color: var(--reading-white) !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 0 15px rgba(255, 42, 42, 0.5) !important;
+}
+
+/* Fix individual post page display */
+.item-view .post {
+    border: 3px solid var(--gtfo-red) !important;
+    background: rgba(30, 0, 0, 0.4) !important;
+    box-shadow: 
+        inset 0 0 30px rgba(255, 42, 42, 0.05),
+        0 0 25px rgba(255, 42, 42, 0.15) !important;
+}
+
+/* Fix post content images */
+.post-body img {
+    max-width: 100% !important;
+    height: auto !important;
+    border: 2px solid var(--terminal-blue) !important;
+    margin: 15px 0 !important;
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.3) !important;
+}
+
+/* Fix blockquotes in posts */
+.post-body blockquote {
+    border-left: 3px solid var(--warning-orange) !important;
+    margin: 20px 0 !important;
+    padding: 15px 20px !important;
+    background: rgba(255, 102, 0, 0.05) !important;
+    color: var(--warning-orange) !important;
+    font-style: italic !important;
+}
+
+.post-body blockquote::before {
+    content: ">>> QUOTED DATA STREAM <<<" !important;
+    display: block !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    font-size: 10px !important;
+    color: var(--terminal-blue) !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
+    letter-spacing: 1px !important;
+}
+
+/* Fix code blocks in posts */
+.post-body code,
+.post-body pre {
+    background: rgba(0, 50, 0, 0.8) !important;
+    border: 1px solid var(--fallout-green) !important;
+    color: #40ff00 !important;
+    font-family: 'Share Tech Mono', monospace !important;
+    padding: 10px 15px !important;
+    margin: 10px 0 !important;
+    border-radius: 0 !important;
+    display: block !important;
+    overflow-x: auto !important;
+}
+
+.post-body::before {
+    content: "--- HOLOTAPE DATA STREAM [GTFO ENHANCED] ---";
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: rgba(0, 204, 255, 0.8);
+    font-size: 11px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed rgba(0, 204, 255, 0.4);
+    padding-bottom: 8px;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 204, 255, 0.4);
+}
+
+/* FIXED: Enhanced Links - GTFO styling */
+a {
+    color: var(--terminal-blue) !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: 'VT323', monospace !important;
+    text-shadow: 0 0 3px rgba(0, 204, 255, 0.4);
+}
+
+a::before {
+    content: "[LINK: ";
+    color: var(--fallout-green);
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+a::after {
+    content: "]";
+    color: var(--fallout-green);
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+a:hover {
+    color: var(--gtfo-red) !important;
+    text-shadow: 0 0 10px rgba(255, 42, 42, 0.6);
+    background: rgba(255, 42, 42, 0.1) !important;
+    padding: 3px 6px;
+    border-radius: 2px;
+}
+
+a:hover::before {
+    content: "[ACCESSING: ";
+    color: var(--gtfo-crimson);
+    animation: cursor-blink 0.5s infinite;
+}
+
+/* FIXED: Form Elements - GTFO themed */
+input, textarea, select {
+    background: rgba(20, 0, 0, 0.9) !important;
+    border: 1px solid var(--gtfo-red) !important;
+    color: var(--reading-white) !important;
+    font-family: 'VT323', monospace !important;
+    padding: 10px;
+    position: relative;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none !important;
+    border-color: var(--terminal-blue) !important;
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.4);
+    background: rgba(0, 30, 40, 0.9) !important;
+}
+
+/* FIXED: Buttons - GTFO themed */
+button, 
+input[type="button"], 
+input[type="submit"],
+.flat-button {
